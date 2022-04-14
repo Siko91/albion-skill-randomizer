@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=500, initial-scale=1.0" />
+    <title>Albion Skill Randomizer</title>
+
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="jquery.js"></script>
+    <script src="selectSkills.js"></script>
+
+    <style>
+      .wrapper {
+        background-image: url("old-paper-g3f98f22e9_1280.jpg");
+        background-size: cover;
+        padding: 50px;
+      }
+
+      .skills_container {
+        border: 1px solid black;
+        min-height: 100px;
+      }
+
+      .skills .skill {
+        display: flex;
+        border-bottom: 1px solid black;
+      }
+      .skills .skill * {
+        padding: 0 1rem;
+      }
+      .skills .skill *.skillName {
+        min-width: 200px;
+        text-align: left;
+      }
+      .skills .skill.passiveSkill .skillName {
+        color: rgb(90, 90, 90);
+      }
+      .skills .skill .skillName::first-letter {
+        font-size: xx-large;
+        font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+        color: black;
+      }
+
+      .skills .skill .skillSelection {
+        font-size: larger;
+      }
+      .skills .skill .altSkillSelection {
+        font-size: smaller;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container wrapper">
+      <h1 class="title text-center">Albion Skill Randomizer</h1>
+      <div class="row text-center">
+        <button class="btn btn-primary my-4" onclick="selectSkills()">Select Skills</button>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-6 col-sm-12 skills_container" id="skills_container_A">
+          <h3 class="text-center">Player 1</h3>
+          <div class="skills">
+            <div class="skill activeSkill">
+              <div class="skillName">Q</div>
+              <div class="skillSelection">1/3</div>
+              <div class="altSkillSelection">2/4</div>
+            </div>
+            <div class="skill activeSkill">
+              <div class="skillName">W</div>
+              <div class="skillSelection">1/3</div>
+              <div class="altSkillSelection">2/4</div>
+            </div>
+            <div class="skill passiveSkill">
+              <div class="skillName">Weapon passive</div>
+              <div class="skillSelection">1/3</div>
+              <div class="altSkillSelection">2/4</div>
+            </div>
+            <div class="skill activeSkill">
+              <div class="skillName">R</div>
+              <div class="skillSelection">1/3</div>
+              <div class="altSkillSelection">2/4</div>
+            </div>
+            <div class="skill passiveSkill">
+              <div class="skillName">Armor passive</div>
+              <div class="skillSelection">1/3</div>
+              <div class="altSkillSelection">2/4</div>
+            </div>
+            <div class="skill activeSkill">
+              <div class="skillName">D</div>
+              <div class="skillSelection">1/3</div>
+              <div class="altSkillSelection">2/4</div>
+            </div>
+            <div class="skill passiveSkill">
+              <div class="skillName">Hat passive</div>
+              <div class="skillSelection">1/3</div>
+              <div class="altSkillSelection">2/4</div>
+            </div>
+            <div class="skill activeSkill">
+              <div class="skillName">F</div>
+              <div class="skillSelection">1/3</div>
+              <div class="altSkillSelection">2/4</div>
+            </div>
+
+            <div class="skill passiveSkill">
+              <div class="skillName">Shoes passive</div>
+              <div class="skillSelection">1/3</div>
+              <div class="altSkillSelection">2/4</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 skills_container" id="skills_container_B"></div>
+      </div>
+    </div>
+  </body>
+</html>
