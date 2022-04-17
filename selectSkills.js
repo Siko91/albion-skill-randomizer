@@ -14,13 +14,13 @@ function selectSkills() {
   for (container of [skills_A, skills_B]) {
     addSkill(container, "Q", true, 3, [2, 4]);
     addSkill(container, "W", true, 4, [3, 5]);
-    addSkill(container, "Weapon passive", false, 3, [4]);
-    addSkill(container, "R", true, 3, [4]);
-    addSkill(container, "Armor passive", false, 3, [4]);
+    addSkill(container, "Weapon passive", false, 3, [4, 5]);
+    addSkill(container, "R", true, 3, [4, 2]);
+    addSkill(container, "Armor passive", false, 2, [3, 4]);
     addSkill(container, "D", true, 3, [4]);
-    addSkill(container, "Hat passive", false, 3, [4]);
+    addSkill(container, "Hat passive", false, 2, [3, 4]);
     addSkill(container, "F", true, 3, [4]);
-    addSkill(container, "Shoes passive", false, 3, [4]);
+    addSkill(container, "Shoes passive", false, 2, [3, 4]);
   }
 }
 
@@ -52,5 +52,5 @@ function addSkill(
 }
 
 function rnd(min, max) {
-    return Math.random() * (max +1 - min) + min |0;
+  return (Math.random() * (max + 1 - min) + min) | 0;
 }
